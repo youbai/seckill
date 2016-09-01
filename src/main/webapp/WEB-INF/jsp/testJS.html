@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js">  ng-app-->
+    <!--<script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>-->
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    <!--Your name: <input type="text" ng-model="yourname" placeholder="World">
+    <hr>
+    Hello {{yourname || 'World'}}!
+
+    <br/>-->
+
+    <!--<form ng-app="" name="myForm">
+        Email:
+        <input type="email" name="myAddress" ng-model="text">
+        <span ng-show="myForm.myAddress.$error.email">不是一个合法的邮箱地址</span>
+    </form>
+
+    <hr/>-->
+
+   <div ng-app="myApp" ng-controller="costCtrl">
+       数量: <input type="number" ng-model="quantity">
+       价格: <input type="number" ng-model="price">
+       <p>总价 = {{ (quantity * price) | currency }}</p>
+   </div>
+
+   <script>
+       var app = angular.module('myApp', []);
+       app.controller('costCtrl', function($scope) {
+           $scope.quantity = 1;
+           $scope.price = 9.99;
+       });
+   </script>
+
+</body>
+</html>
